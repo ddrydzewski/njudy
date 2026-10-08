@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f7f8f5" />
+    <meta name="description" content="Njudy. Kilka minut dla ciekawości: programowanie, nuty, angielski, sztuka i więcej. Bez konta, także offline." />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Njudy" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+    <title>Njudy · Daj głowie coś dobrego</title>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <a class="brand" href="#today" aria-label="Njudy, strona główna"><img src="./icon.svg" alt="" width="40" height="40" />njudy<span class="brand-dot">.</span></a>
+      <div class="sidebar-label">TWOJA MAŁA CODZIENNOŚĆ</div>
+      <nav class="navigation" aria-label="Nawigacja główna">
+        <a href="#today" data-view="today"><i data-lucide="sun"></i><span>Dzisiaj</span></a>
+        <a href="#explore" data-view="explore"><i data-lucide="compass"></i><span>Odkrywaj</span></a>
+        <a href="#saved" data-view="saved"><i data-lucide="bookmark"></i><span>Zapisane</span><span id="saved-count" class="nav-count">0</span></a>
+        <a href="#progress" data-view="progress"><i data-lucide="chart-no-axes-column-increasing"></i><span>Twój rozwój</span></a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="small-motto"><span class="motto-dot"></span>Trochę mniej scrollowania.<br />Trochę więcej ciebie.</div>
+        <button class="settings-button" data-action="settings"><i data-lucide="sliders-horizontal"></i>Ustawienia<i data-lucide="chevron-right"></i></button>
+      </div>
+    </aside>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="mobile-brand brand" href="#today">njudy<span class="brand-dot">.</span></a>
+        <span class="desktop-top-label">DOBRZE, ŻE JESTEŚ.</span>
+        <div class="topbar-right">
+          <span id="connection" class="connection"><span></span><span id="connection-text">Gotowe do nauki</span></span>
+          <span class="streak-chip" title="Seria dni nauki"><i data-lucide="flame"></i><strong id="header-streak">0</strong><span>dni</span></span>
+          <button class="avatar" data-action="settings" aria-label="Otwórz ustawienia" title="Ustawienia"><i data-lucide="smile"></i></button>
+        </div>
+      </header>
+      <main id="main" tabindex="-1"></main>
+      <footer class="page-footer"><span>Małe kroki. Szerokie horyzonty.</span><span>Njudy · bez presji, bez reklam.</span></footer>
+    </div>
+    <dialog id="lesson-dialog" class="lesson-dialog" aria-labelledby="lesson-title"></dialog>
+    <dialog id="reader-dialog" class="reader-dialog" aria-labelledby="reader-title"></dialog>
+    <dialog id="settings-dialog" class="settings-dialog" aria-labelledby="settings-title"></dialog>
+    <div id="toast" role="status" class="toast"></div>
+    <noscript>Włącz JavaScript, aby korzystać z ćwiczeń Njudy.</noscript>
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
